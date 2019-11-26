@@ -1,3 +1,4 @@
+%%!TEX encoding = UTF-8 Unicode
 \documentclass[final, 12pt]{report}
 \parindent=0pt
 
@@ -7,7 +8,8 @@
 \usepackage[final]{pdfpages}
 
 \usepackage{fontspec}
-\setmainfont{Symbola}
+%\setmainfont{Symbola}
+\setmainfont{Everson Mono}
 
 \usepackage{hyperref}
 
@@ -29,7 +31,7 @@
 	\begin{tabular}{lp{6in}}
 		\hline
 		\\
-		\textbf{Author:}				&	{{AUTHORNAME}}		\\
+		\textbf{Author:}				&	{{AUTHOR}}		\\
 		\textbf{Title:}				&	{{TITLE}}			\\
 %		\textbf{Permanent URL:}		& 	\href{{URL}}{{URL}}	\\
 %		\textbf{Date of Access:}		& 	{ACCESSDATE}			\\
@@ -78,7 +80,8 @@
 
 	\end{nopage}
 	
-%	\includepdf[pages=-]{pdfs/PDFFILENAME.pdf}
+%	\includepdf[pages=-,fitpaper]{{PDFFILENAME}}
+	
 \end{document}
 
 

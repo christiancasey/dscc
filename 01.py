@@ -5,7 +5,7 @@ Created on Tue Nov 26 2019
 
 @author: christiancasey
 
-This loads the title list. MORE INFO HERE
+This loads the title list. This is a test run to verify reading and writing from Google Sheet.
 """
 
 import os
@@ -21,26 +21,34 @@ strURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRn0p05_7FUCxadsu4EXAH
 dfTitles = pandas.read_csv(strURL)
 dfTitles = dfTitles.fillna('')
 
+
 # Select only those titles marked for upload
 dfTitlesUpload = dfTitles.loc[dfTitles['Upload']==1]
+dfTitlesUpload = dfTitlesUpload.sort_values(['Filename'])
 
-#%%
+#%% Make sure files are actually present
+
+vFiles = dfTitlesUpload['Filename'].tolist()
+for strFile in vFiles:
+	try:
+		f = open('pdf_in/' + strFile)
+	except:
+		raise Warning('%s not found.' % strFile)
+		
+
+#%% Change something to test
 
 dfTitles.loc[ dfTitles['Original Filename'] == dfTitlesUpload['Original Filename'].iloc[0], 'Omeka Link'] = 'test'
 
-#%% Get file list for PDFs
-vFiles = glob.glob('pdf_in/*.pdf')
-for strFilename in vFiles:
-	print(strFilename)
 
 
 
-#%% Google Sheets test
+#%% Update Google Sheet with new data
 gc = pygsheets.authorize(service_file='credentials.json')
 
 sh = gc.open('DSCC Title List')
 wks = sh[0]
-wks.set_dataframe(dfTitles,(1,1))
+#wks.set_dataframe(dfTitles,(1,1))
 
 
 
