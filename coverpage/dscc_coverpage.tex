@@ -1,0 +1,88 @@
+\documentclass[final, 12pt]{report}
+\parindent=0pt
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[final]{pdfpages}
+
+\usepackage{fontspec}
+\setmainfont{Symbola}
+
+\usepackage{hyperref}
+
+\usepackage{lipsum}			%%%%% TEMPORARY
+
+\newcounter{nopage}
+\newenvironment{nopage}
+	{\clearpage\stepcounter{nopage}%
+		\renewcommand{\thepage}{}%
+		\thispagestyle{empty}}
+	{\clearpage\addtocounter{page}{0}}
+
+\begin{document}
+	\begin{nopage}
+
+	This is a file in the 
+	\href{http://dcaa.hosting.nyu.edu/}{Digital South Caucasus Colletion (DSCC) project}:\vspace{24pt}
+	
+	\begin{tabular}{lp{6in}}
+		\hline
+		\\
+		\textbf{Author:}				&	{{AUTHORNAME}}		\\
+		\textbf{Title:}				&	{{TITLE}}			\\
+%		\textbf{Permanent URL:}		& 	\href{{URL}}{{URL}}	\\
+%		\textbf{Date of Access:}		& 	{ACCESSDATE}			\\
+		\\
+		\hline
+	\end{tabular}
+	
+	\vspace{24pt}
+	
+	The 
+	\href{http://dcaa.hosting.nyu.edu/dscc}{DSCC}
+	is part of the 
+	\href{http://dlib.nyu.edu/ancientworld/}{Ancient World Digital Library}
+	hosted by the 
+	\href{https://isaw.nyu.edu/library}{Institute for the Study of the Ancient World Library}.
+	
+	\vspace{24pt}
+	
+	The \href{https://www.aejm.org/members/georgian-national-museum/}{Georgian National Museum} has granted permission to the Institute for the Study of the Ancient World of New York University to publish this material electronically in the \href{http://dcaa.hosting.nyu.edu/dscc/}{Digital South Caucasus Collection (DSCC)}.	
+	%
+	% This scan was provided by {PROVIDERINSTITUTION}
+	% Get copyright from file metadata
+	% Partnership information - E.g. "The work was done in conjunction with the Georgian National Library? 
+	%
+	We are making such material available on a noncommercial basis  for research and educational purposes
+		in an effort to expand access to thinly-held and/or out-of-print  material related to the study of the ancient world.
+	If you wish to use copyrighted material from this site  for purposes beyond those in accordance with fair use 
+		(\href{https://www.copyright.gov/title17/92chap1.html}{Title 17 U.S.C. Section 107}),
+		you must obtain permission from the 
+		\href{https://www.aejm.org/members/georgian-national-museum/}{Georgian National Museum}. 
+	We respect the intellectual property rights of others.
+	If you believe that you own the copyright to the material made available on this site, 
+		please see our \href{http:/dcaa.hosting.nyu.edu/takedown-notice}{takedown policy}: 
+		\href{http:/dcaa.hosting.nyu.edu/takedown-notice}{http:/dcaa.hosting.nyu.edu/takedown-notice}
+
+\vspace*{\fill}
+\begin{figure}[!bth]
+	\makebox[\textwidth]{\href{http://dcaa.hosting.nyu.edu/dscc/}{\includegraphics[width=\paperwidth]{dscc_banner}}}
+\end{figure}
+%	\vspace*{\fill}
+
+%	\begin{center}
+%		\footnotesize
+%		Accessed on {ACCESSDATE}	\\
+%	\end{center}
+
+	\end{nopage}
+	
+%	\includepdf[pages=-]{pdfs/PDFFILENAME.pdf}
+\end{document}
+
+
+
+
+
+
