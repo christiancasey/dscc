@@ -38,7 +38,7 @@ for strFile in vFiles:
 
 #%% Change something to test
 
-dfTitles.loc[ dfTitles['Original Filename'] == dfTitlesUpload['Original Filename'].iloc[0], 'Omeka Link'] = 'test'
+#dfTitles.loc[ dfTitles['Original Filename'] == dfTitlesUpload['Original Filename'].iloc[0], 'Omeka Link'] = 'test'
 
 
 
@@ -49,6 +49,31 @@ gc = pygsheets.authorize(service_file='credentials.json')
 sh = gc.open('DSCC Title List')
 wks = sh[0]
 #wks.set_dataframe(dfTitles,(1,1))
+
+
+
+#%% Select just the columns with the Dublin Core names
+
+dfTest = dfTitlesUpload.loc[ :, dfTitles.iloc[0] != '' ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

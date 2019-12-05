@@ -1,0 +1,16 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<dublin_core>
+	<dcvalue element="type">book
+	</dcvalue>
+	<dcvalue element="title">Researches in Iberia-Colchology
+	</dcvalue>
+	<dcvalue element="contributor" qualifier="author">Gamqreliże, Gela
+	</dcvalue>
+	<dcvalue element="date" qualifier="issued">2012
+	</dcvalue>
+	<dcvalue element="rights">The Georgian National Museum has granted permission to the Institute for the Study of the Ancient World of New York University to publish this material electronically in the Digital South Caucasus Collection (DSCC). We are making such material available on a noncommercial basis for research and educational purposes, in an effort to expand access to thinly-held and/or out-of-print material related to the study of the ancient world to the widest possible audience. If you wish to use copyrighted material from this site for purposes beyond those in accordance with fair use (Title 17 U.S.C. Section 107), you must obtain permission from The Georgian National Museum. We respect the intellectual property rights of others. If you believe that you own the copyright to the material made available on this site, please see our takedown policy: http://dcaa.hosting.nyu.edu/dscc/takedown-notice.
+	</dcvalue>
+	<dcvalue element="language">English
+	</dcvalue>
+</dublin_core>
